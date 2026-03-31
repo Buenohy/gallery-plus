@@ -8,6 +8,7 @@ import Divider from './components/divider';
 import InputText from './components/input-text';
 import SearchIcon from './assets/icons/search.svg?react';
 import InputCheckbox from './components/input-checkbox';
+import InputSingleFlie from './components/input-single-flie';
 
 export default function App() {
   return (
@@ -58,6 +59,10 @@ export default function App() {
 
       <div>
         <InputCheckbox />
+      </div>
+
+      <div>
+        <InputSingleFlie />
       </div>
     </div>
   );
