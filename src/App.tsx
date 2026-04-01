@@ -10,7 +10,6 @@ import SearchIcon from './assets/icons/search.svg?react';
 import InputCheckbox from './components/input-checkbox';
 import InputSingleFlie from './components/input-single-flie';
 import { useForm } from 'react-hook-form';
-import { register } from 'module';
 
 export default function App() {
   const form = useForm();
@@ -65,7 +64,12 @@ export default function App() {
       </div>
 
       <div>
-        <InputSingleFlie form={form} {...form.register('file')} />
+        <InputSingleFlie
+          form={form}
+          allowedExtensions={['png', 'jpg', 'jpeg', 'webp']}
+          maxFileSizeInMB={50}
+          {...form.register('file')}
+        />
       </div>
     </div>
   );
