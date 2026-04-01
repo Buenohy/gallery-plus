@@ -11,6 +11,9 @@ import InputCheckbox from './components/input-checkbox';
 import InputSingleFlie from './components/input-single-flie';
 import { useForm } from 'react-hook-form';
 import ImageFilePreview from './components/image-file-preview';
+import { Dialog, DialogContent } from './components/dialog';
+import { DialogTrigger } from '@radix-ui/react-dialog';
+import Text from './components/text';
 
 export default function App() {
   const form = useForm();
@@ -75,6 +78,17 @@ export default function App() {
           replaceBy={<ImageFilePreview src={fileSource} alt="Imagem" />}
           {...form.register('file')}
         />
+      </div>
+
+      <div>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button>Abrir Modal</Button>
+          </DialogTrigger>
+          <DialogContent>
+            <Text>Teste modal</Text>
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );
