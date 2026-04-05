@@ -4,7 +4,8 @@ import Text from '../components/text';
 export default function LayoutMain() {
   return (
     <>
-      <Text variant="heading-large">Layout Main</Text>
+      <Text variant="heading-large">Layout Main!</Text>
+      <hr />
       <Outlet />;
     </>
   );
