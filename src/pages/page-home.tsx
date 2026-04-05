@@ -5,7 +5,7 @@ import type { Photo } from '../contexts/photos/models/photo';
 export default function PageHome() {
   return (
     <Container>
-      <div className="grid grid-cols-4 gap-9">
+      <div className="grid grid-cols-5 gap-9">
         <PhotoWidget
           photo={{
             id: '123',
