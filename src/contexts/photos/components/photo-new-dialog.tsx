@@ -17,13 +17,14 @@ import Text from '../../../components/text';
 import Skeleton from '../../../components/skeleton';
 import { useForm } from 'react-hook-form';
 import useAlbums from '../../albums/hooks/use-albums';
+import type { PhotoNewFormSchema } from '../schemas';
 
 interface PhotoNewDialogProps {
   trigger: React.ReactNode;
 }
 
 export default function PhotoNewDialog({ trigger }: PhotoNewDialogProps) {
-  const form = useForm();
+  const form = useForm<PhotoNewFormSchema>({});
   const { albums, isLoadingAlbums } = useAlbums();
 
   return (
