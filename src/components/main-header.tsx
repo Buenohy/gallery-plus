@@ -17,19 +17,24 @@ export default function MainHeader({ className, ...props }: MainHeaderProps) {
   return (
     <Container
       as="header"
-      className={cx('flex justify-between items-center gap-10', className)}
+      className={cx(
+        'flex flex-col justify-between md:flex md:flex-row items-center gap-5 md:gap-10',
+        className,
+      )}
       {...props}
     >
-      <Link to="/">
-        <Logo className="h-5" />
-      </Link>
+      <div className="flex flex-1 justify-between items-center gap-10 w-full min-w-0">
+        <Link to="/" className="shrink-0">
+          <Logo className="h-5" />
+        </Link>
 
-      {pathname === '/' && (
-        <>
-          <PhotosSearch />
-          <Divider orientation="vertical" className="h-10" />
-        </>
-      )}
+        {pathname === '/' && (
+          <>
+            <PhotosSearch />
+            <Divider orientation="vertical" className="hidden md:flex h-10" />
+          </>
+        )}
+      </div>
 
       <div className="flex items-center gap-3">
         <PhotoNewDialog trigger={<Button>Nova Foto</Button>} />

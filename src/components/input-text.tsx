@@ -4,7 +4,7 @@ import Text from './text';
 import type React from 'react';
 
 export const inputTextContainerVariants = tv({
-  base: 'flex flex-col gap-1',
+  base: 'flex flex-col gap-1 w-full min-w-0',
 });
 
 export const inputTextWrapperVariants = tv({
@@ -30,7 +30,7 @@ export const inputTextWrapperVariants = tv({
 export const inputTextVariants = tv({
   base: `
   bg-transparent outline-none placeholder:text-placeholder
-  text-accent-paragraph flex-1
+  text-accent-paragraph flex-1 w-0 min-w-0
   `,
 });
 
