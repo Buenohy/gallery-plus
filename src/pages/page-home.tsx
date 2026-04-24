@@ -13,7 +13,7 @@ export default function PageHome() {
       <AlbumsFilter
         albums={albums}
         loading={isLoadingAlbums}
-        className="mb-9"
+        className="mb-4 md:mb-9"
       />
       <PhotoList photos={photos} loading={isLoadingPhotos} />
     </Container>

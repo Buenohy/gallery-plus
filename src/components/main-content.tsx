@@ -9,7 +9,7 @@ export default function MainContent({
   ...props
 }: MainContentProps) {
   return (
-    <main className={cx('mt-20 pb-20', className)} {...props}>
+    <main className={cx('mt-10 pb-10 md:mt-20 md:pb-20', className)} {...props}>
       {children}
     </main>
   );
