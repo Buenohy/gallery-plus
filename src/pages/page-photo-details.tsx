@@ -30,7 +30,7 @@ export default function PagePhotoDetails() {
 
   return (
     <Container>
-      <header className="flex items-center justify-between gap-8 mb-8">
+      <header className="flex flex-col md:flex md:flex-row items-center justify-between gap-8 mb-8">
         {!isLoadingPhoto ? (
           <Text as="h2" variant="heading-large">
             {photo?.title}
@@ -44,7 +44,7 @@ export default function PagePhotoDetails() {
           loading={isLoadingPhoto}
         />
       </header>
-      <div className="grid grid-cols-[21rem_1fr] gap-24">
+      <div className="flex flex-col gap-4 md:grid md:grid-cols-[21rem_1fr] md:gap-24">
         <div className="space-y-3">
           {!isLoadingPhoto ? (
             <ImagePreview

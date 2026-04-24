@@ -18,7 +18,7 @@ export default function MainHeader({ className, ...props }: MainHeaderProps) {
     <Container
       as="header"
       className={cx(
-        'flex flex-col justify-between md:flex md:flex-row items-center gap-5 md:gap-10',
+        'flex flex-col justify-between md:flex md:flex-row items-center gap-10',
         className,
       )}
       {...props}

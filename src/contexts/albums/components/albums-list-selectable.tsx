@@ -49,7 +49,7 @@ export default function AlbumsListSelectable({
         albums.map((album, index) => (
           <li key={album.id}>
             <div className="flex items-center justify-between gap-1">
-              <Text variant="paragraph-large" className="truncate">
+              <Text variant="paragraph-large" className="truncate ">
                 {album.title}
               </Text>
               <InputCheckbox
