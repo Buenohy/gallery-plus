@@ -24,14 +24,14 @@ export default function PhotoList({ photos, loading }: PhotoListProps) {
         )}
       </Text>
       {!loading && photos?.length > 0 && (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-9">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-5 lg:gap-9">
           {photos.map((photo) => (
             <PhotoWidget key={photo.id} photo={photo} />
           ))}
         </div>
       )}
       {loading && (
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-5 md:gap-9">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-5 lg:gap-9">
           {Array.from({ length: 10 }).map((_, index) => (
             <PhotoWidget
               key={`photo-loading-${index}`}
